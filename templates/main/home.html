@@ -1,0 +1,462 @@
+{% extends 'layouts/app.html' %}
+{% load static %}
+
+{% block header-class %}
+header tra-menu navbar-light
+{% endblock %}
+
+{% block content %}
+<!-- HERO-3
+			============================================= -->
+<section id="hero-3" class="bg-scroll hero-section division">
+    <div class="container">
+        <div class="row d-flex align-items-center">
+
+
+            <!-- HERO TEXT -->
+            <div class="col-lg-6">
+                <div class="hero-3-txt white-color">
+
+                    <!-- Title -->
+                    <h2 class="h2-lg wow fadeInUp">Современная веб студия - Relevant</h2>
+
+                    <!-- Text -->
+                    <p class="p-xl wow fadeInUp">
+                        Мы создали “Relevant” для того,
+                        чтобы вам было проще достигать
+                        своих целей по продвижению
+                        товаров и услуг в интернете.
+                    </p>
+
+                    <!-- Buttons Group -->
+                    <div class="btns-group mb-30 wow fadeInUp">
+                        <a href="{% url 'contact_us_view' %}" class="btn btn-green tra-white-hover mr-15" >Оставить заявку</a>
+                    </div>
+
+                   
+
+                    <!-- Advantages List -->
+                    <ul class="advantages clearfix wow fadeInUp">
+                        <li class="first-li">
+                            <p>Web разработка</p>
+                        </li>
+                        <li>
+                            <p>Техническая поддержка</p>
+                        </li>
+                        <li class="last-li">
+                            <p>Интеграция ПО</p>
+                        </li>
+                    </ul>
+
+                </div>
+            </div> <!-- END HERO TEXT -->
+
+
+            <!-- HERO IMAGE -->
+            <div class="col-lg-6">
+                <div class="hero-3-img wow fadeInRight">
+                    <img class="img-fluid" src="{% static 'images/tablet-ipad.png' %}" alt="hero-image">
+                </div>
+            </div>
+
+
+        </div> <!-- End row -->
+    </div> <!-- End container -->
+
+
+    <!-- WAVE SHAPE BOTTOM -->
+    <div class="wave-shape-bottom">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 195">
+            <path fill="#ffffff" fill-opacity="1" d="M0,192L1440,96L1440,320L0,320Z"></path>
+        </svg>
+    </div>
+
+
+</section> <!-- END HERO-3 -->
+
+
+
+
+<!-- BRANDS-1
+                ============================================= -->
+<div id="brands-1" class="wide-100 brands-section division">
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+
+
+                <!-- Brands Carousel -->
+                <div class="owl-carousel brands-carousel">
+
+                    {% for brand in brands %}
+
+                    <!-- Brand Logo Image -->
+                    <div class="brand-logo">
+                        <img class="img-fluid" src="{{brand.photo.url}}" alt="{{brand.name}}" />
+                    </div>
+
+                    {% endfor %}
+
+                </div> <!-- End Brands Carousel -->
+
+
+            </div>
+        </div> <!-- End row -->
+    </div> <!-- End container -->
+</div> <!-- END BRANDS-1 -->
+
+
+
+
+<!-- CONTENT-2
+                ============================================= -->
+<section id="content-2" class="content-2 pb-60 content-section division">
+    <div class="container">
+        <div class="row d-flex align-items-center">
+
+
+            <!-- IMAGE BLOCK -->
+            <div class="col-md-5 col-lg-6">
+                <div class="rel img-block left-column wow fadeInRight">
+                    <img class="img-fluid" src="{% static 'images/seo-04.png' %}" alt="content-image">
+                </div>
+            </div>
+
+
+            <!-- TEXT BLOCK -->
+            <div class="col-md-7 col-lg-6">
+                <div class="txt-block right-column wow fadeInLeft">
+
+                    <!-- Section ID -->
+                    <span class="section-id txt-upcase">Relevant group</span>
+
+                    <!-- Title -->
+                    <h2 class="h2-xs">Начинай свой бизнес с Relevant</h2>
+
+                    <!-- Text -->
+                    <p class="p-lg">Начните свой бизнес с современной веб-студией RELEVANT.
+                        Мы сфокусированы на улучшении вашего продукта,что бы ваш продукт был продаваем на рынке.
+                        У нас опытная команда.Мы интегрируем качество и дедлайн в совокупности
+                    </p>
+
+    
+                </div>
+            </div> <!-- END TEXT BLOCK -->
+
+
+        </div> <!-- End row -->
+    </div> <!-- End container -->
+</section> <!-- END CONTENT-2 -->
+
+
+
+
+<!-- FEATURES-8
+                ============================================= -->
+<section id="features-8" class="pb-60 features-section division">
+    <div class="container">
+
+
+        <!-- SECTION TITLE -->
+        <div class="row justify-content-center">
+            <div class="col-lg-10 col-xl-8">
+                <div class="section-title title-01 mb-70">
+
+                    <!-- Title -->
+                    <h2 class="h2-md">Что мы делаем ?</h2>
+
+                    <!-- Text -->
+                    <p class="p-xl">Мы ориентированы на компании, которые ищут кому доверить создание сайта,
+                        мобильных приложений, интеграция ПО и вопросы продвижения своих товаров и услуг в
+                        Интернете.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- FEATURES-8 WRAPPER -->
+        <div class="fbox-8-wrapper text-center">
+            <div class="row row-cols-1 row-cols-md-3">
+
+
+                <!-- FEATURE BOX #1 -->
+                <div class="col">
+                    <div class="fbox-8 mb-40 wow fadeInUp">
+
+                        <!-- Image -->
+                        <div class="fbox-img bg-whitesmoke-gradient">
+                            <img class="img-fluid" src="{% static 'images/hero-18-img.png' %}" alt="feature-icon" />
+                        </div>
+
+                        <!-- Title -->
+                        <h5 class="h5-md">Разумная цена за услугу</h5>
+
+                        <!-- Text -->
+                        <p class="p-lg">Мы предлагаем адекватные цены в зависомости от масштаба вашего проекта
+                        </p>
+
+                    </div>
+                </div>
+
+
+                <!-- FEATURE BOX #2 -->
+                <div class="col">
+                    <div class="fbox-8 mb-40 wow fadeInUp">
+
+                        <!-- Image -->
+                        <div class="fbox-img bg-whitesmoke-gradient">
+                            <img class="img-fluid" src="{% static 'images/hero-22-img.png' %}" alt="feature-icon" />
+                        </div>
+
+                        <!-- Title -->
+                        <h5 class="h5-md">Опытная молодая команда</h5>
+
+                        <!-- Text -->
+                        <p class="p-lg">Наша команда к каждому проекту подходить креативно
+                        </p>
+
+                    </div>
+                </div>
+
+
+                <!-- FEATURE BOX #3 -->
+                <div class="col">
+                    <div class="fbox-8 mb-40 wow fadeInUp">
+
+                        <!-- Image -->
+                        <div class="fbox-img bg-whitesmoke-gradient">
+                            <img class="img-fluid" src="{% static 'images/img-23.png' %}" alt="feature-icon" />
+                        </div>
+
+                        <!-- Title -->
+                        <h5 class="h5-md">Современные технологии</h5>
+
+                        <!-- Text -->
+                        <p class="p-lg">Ваш проект будет выполнен во время и качественно
+                        </p>
+
+                    </div>
+                </div>
+
+
+            </div> <!-- End row -->
+        </div> <!-- END FEATURES-8 WRAPPER -->
+
+
+    </div> <!-- End container -->
+</section> <!-- END FEATURES-8 -->
+
+
+
+<!-- PROJECTS-2
+                ============================================= -->
+<section id="projects-2" class="pb-60 projects-section division">
+    <div class="container">
+
+
+        <!-- SECTION TITLE -->
+        <div class="row justify-content-center">
+            <div class="col-lg-10 col-xl-8">
+                <div class="section-title title-01 mb-70">
+                    <h2 class="h2-md">Наше портфолио</h2>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- PROJECTS-2 WRAPPER -->
+        <div class="row">
+            <div class="col gallery-items-list">
+                <div class="masonry-wrap grid-loaded">
+
+                    {% for project in projects %}
+                    <!-- PROJECT #1 -->
+                    <div class="project-details masonry-image">
+
+                        <!-- Image -->
+                        <div class="project-preview rel">
+                            <div class="hover-overlay">
+                                <img class="img-fluid" src="{{project.photo.url}}" alt="project-preview" />
+                                <div class="item-overlay"></div>
+                            </div>
+                        </div>
+
+                        <!-- Text -->
+                        <div class="project-txt">
+
+                            <!-- Link -->
+                            <h5 class="h5-md">
+                                <a>{{project.name}}</a>
+                            </h5>
+
+                            <p class="p-md grey-color">{{project.short_description}}</p>
+                        </div>
+
+                    </div> <!-- END PROJECT #1 -->
+
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div> <!-- END PROJECTS-1 WRAPPER -->
+
+
+
+
+
+
+        <!-- FEATURES-3
+			============================================= -->
+        <section id="features-3" class="pb-60 features-section division">
+            <div class="container">
+
+
+                <!-- SECTION TITLE -->
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 col-xl-8">
+                        <div class="section-title title-01 mb-80">
+
+                            <!-- Title -->
+                            <h2 class="h2-md">Креатив и качество,ради этого мы работаем усиленно</h2>
+
+                            <!-- Text -->
+                            <p class="p-xl">Ведь каждая наша работа плюс в нашу копилку опыта.С каждой работой,мы становимся лучше и креативнее.Каждый клиент для нас открытие.И мы работаем ради качества и креативности.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- FEATURES-3 WRAPPER -->
+                <div class="fbox-3-wrapper text-center">
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+
+                        {% for feature in features %}
+                        <!-- FEATURE BOX #1 -->
+                        <div class="col">
+                            <div class="fbox-3 pc-15 mb-40 wow fadeInUp">
+
+                                <!-- Icon -->
+                                <div class="fbox-ico-center ico-rounded-lg ico-45 bg-tra-purple purple-color">
+                                    <span class="{{feature.icon_name}}"></span>
+                                </div>
+
+                                <!-- Text -->
+                                <div class="fbox-txt-center">
+
+                                    <!-- Title -->
+                                    <h5 class="h5-md">{{feature.name}}</h5>
+
+                                    <!-- Text -->
+                                    <p class="p-lg">{{feature.short_description}}
+                                    </p>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        {% endfor %}
+
+                    </div>
+                </div> <!-- END FEATURES-3 WRAPPER -->
+
+
+            </div> <!-- End container -->
+        </section> <!-- END FEATURES-3 -->
+
+
+
+        <!-- TESTIMONIALS-1
+                ============================================= -->
+        <section id="reviews-1" class="bg-whitesmoke-gradient wide-100 reviews-section division">
+            <div class="container">
+
+
+                <!-- SECTION TITLE -->
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 col-xl-8">
+                        <div class="section-title title-01 mb-70">
+
+                            <!-- Title -->
+                            <h2 class="h2-md">Обратная связь наших клиентов</h2>
+
+                            <!-- Text -->
+                            <p class="p-xl">Мы к каждому клиентому относимся индивидуально и слушаем внимательно его предпочтения.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- TESTIMONIALS CONTENT -->
+                <div class="row">
+                    <div class="col">
+                        <div class="owl-carousel owl-theme reviews-1-wrapper">
+
+                            {% for rating in ratings %}
+
+                            <!-- TESTIMONIAL #1 -->
+                            <div class="review-1">
+
+                                <!-- Quote Icon -->
+                                <div class="review-1-ico ico-25">
+                                    <span class="flaticon-left-quote"></span>
+                                </div>
+
+                                <!-- Text -->
+                                <div class="review-1-txt">
+
+                                    <!-- Text -->
+                                    <p class="p-lg">{{rating.description}}
+                                    </p>
+
+                                    <!-- Testimonial Author -->
+                                    <div class="author-data clearfix">
+
+                                        <!-- Testimonial Avatar -->
+                                        <div class="review-avatar">
+                                            <img src="{{rating.photo_user.url}}" alt="review-avatar">
+                                        </div>
+
+                                        <!-- Testimonial Author -->
+                                        <div class="review-author">
+
+                                            <h6 class="h6-xl">{{rating.name}}</h6>
+
+
+                                            <!-- Rating -->
+                                            <div class="review-rating ico-15 yellow-color">
+                                                {% for number in rating.star %}
+                                                <span class="flaticon-star-1"></span>
+                                                {% endfor %}
+
+                                            </div>
+
+                                        </div>
+
+                                    </div> <!-- End Testimonial Author -->
+
+                                </div> <!-- End Text -->
+
+                            </div> <!-- END TESTIMONIAL #1 -->
+
+                            {% endfor %}
+
+
+                        </div>
+                    </div>
+                </div> <!-- END TESTIMONIALS CONTENT -->
+
+
+            </div> <!-- End container -->
+        </section> <!-- END TESTIMONIALS-1 -->
+
+
+
+
+        {% endblock %}
