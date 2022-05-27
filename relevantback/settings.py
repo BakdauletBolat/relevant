@@ -16,7 +16,7 @@ SECRET_KEY = 'django-insecure-qpbjxy-g7=mt)fp)+a_*v599jph)t@*gz)g7c*i8%)wyu@fn7-
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['195.49.215.216','relevant.kz']
+ALLOWED_HOSTS = ['195.49.215.216', 'relevant.kz']
 
 
 INSTALLED_APPS = [
@@ -63,12 +63,25 @@ WSGI_APPLICATION = 'relevantback.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+if DB_DEBUG:
+
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'relevant',
+            'USER': 'relevant_user',
+            'PASSWORD': 'baguvix123F',
+            'HOST': 'localhost',
+            'PORT': '',
+        }
+    }
 
 
 # Password validation
