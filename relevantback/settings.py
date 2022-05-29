@@ -14,7 +14,7 @@ except Exception:
 SECRET_KEY = 'django-insecure-qpbjxy-g7=mt)fp)+a_*v599jph)t@*gz)g7c*i8%)wyu@fn7-'
 
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['195.49.215.216', 'relevant.kz','127.0.0.1']
 
