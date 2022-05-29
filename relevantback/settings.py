@@ -6,7 +6,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 DB_DEBUG = True
 
 try:
-    import conf
+    from .conf import *
     DB_DEBUG = True
 except Exception:
     DB_DEBUG = False
@@ -14,9 +14,9 @@ except Exception:
 SECRET_KEY = 'django-insecure-qpbjxy-g7=mt)fp)+a_*v599jph)t@*gz)g7c*i8%)wyu@fn7-'
 
 
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['195.49.215.216', 'relevant.kz']
+ALLOWED_HOSTS = ['195.49.215.216', 'relevant.kz','127.0.0.1']
 
 
 INSTALLED_APPS = [
@@ -64,7 +64,6 @@ WSGI_APPLICATION = 'relevantback.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 if DB_DEBUG:
-
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',

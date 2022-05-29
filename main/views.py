@@ -2,8 +2,24 @@
 from django.shortcuts import redirect, render
 from django.urls import reverse
 
-from .models import Brand,Feature, Person,Rating,Project
+from .models import Brand,Feature, Person,Rating,Project, TelegramUser
 from .forms import RequestForm
+from rest_framework.generics import CreateAPIView
+from .serializers import TelegramBotSerializer
+from telegram.ext import (
+    Updater,
+    CommandHandler,
+    MessageHandler,
+    Filters,
+    ConversationHandler,
+)
+
+
+class TelegramUserCreateAPIView(CreateAPIView):
+
+    serializer_class = TelegramBotSerializer
+    queryset = TelegramUser.objects.all()
+
 
 def home_view(request):
     brands = Brand.objects.all()
@@ -42,12 +58,17 @@ def projects_view(request):
 
 def submit_request(request):
 
+    updater = Updater("5478835430:AAEqT3Kw8QKDlTPRzIfSRVYAlBOW2uIxfPQ")
+    telegram_users = TelegramUser.objects.all()
     if request.method == "POST" or None:
         form = RequestForm(request.POST or None)
         if  form.is_valid():
             form.save(commit=False)
-            print("Valid Form")
-            form.save()
+            obj = form.save()
+            for user in telegram_users:
+                updater.bot.send_message(chat_id=user.chat_id,text=f"""
+                <b>Ух ты у нас новая заявка № {obj.id} !!! </b> \n Номер телефона:  <u><b>{obj.phone}</b></u> \n Имя: <b> {obj.name} </b> \n Время создание: {obj.created_at} \n
+                """,parse_mode="HTML")
             return redirect(reverse('success_view'))
         else:
             return render(request, 'main/contact.html',{'form':form})

@@ -16,6 +16,11 @@ class Brand(models.Model):
         return self.name
 
 
+class TelegramUser(models.Model):
+
+    chat_id = models.CharField(max_length=255)
+    user_name = models.CharField(max_length=255)
+
 class Project(models.Model):
 
     name = models.CharField(max_length=255)
@@ -52,7 +57,7 @@ class Feature(models.Model):
 
 class Rating(models.Model):
 
-    star = models.IntegerField(default=4)
+    star = models.CharField(default="4",max_length=255)
     full_name = models.CharField(max_length=255)
     photo_user = models.ImageField(upload_to='photo-user/')
     description = models.TextField(null=True,blank=True)
