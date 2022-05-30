@@ -21,7 +21,7 @@ logger = logging.getLogger(__name__)
 # Определяем константы этапов разговора
 PINCODE, AGAIN, LOCATION, BIO = range(4)
 
-apiUrl = 'http://127.0.0.1:8000'
+apiUrl = 'http://relevant.kz'
 def start(update, _):
     # Начинаем разговор с вопроса
     update.message.reply_text(

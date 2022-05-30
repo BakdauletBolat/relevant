@@ -47,6 +47,8 @@
 	<!-- TEMPLATE CSS -->
 	<link href="{% static 'css/style.css' %}" rel="stylesheet">
 
+	<link rel="stylesheet" href="{% static 'css/b-style.css' %}">
+
 	<!-- RESPONSIVE CSS -->
 	<link href="{% static 'css/responsive.css' %}" rel="stylesheet">
 
@@ -82,6 +84,18 @@
 
 
 
+		<div class="bottom-trigger__row">
+			<a href="tel: +7 775 403 70 41" class="bottom-trigger__button bottom-trigger__button--blue">
+				<span class="flaticon-phone-call mr-10"></span>
+				<span>Позвонить</span>
+			</a>
+			<a href="https://api.whatsapp.com/send/?phone=%2B77754037041&text&app_absent=0"
+				class="bottom-trigger__button ">
+				<span class="flaticon-whatsapp mr-10"></span>
+				<span>Whatsapp</span>
+			</a>
+		</div>
+
 		<!-- HEADER
 			============================================= -->
 		<header id="header" class="
@@ -94,7 +108,8 @@
 
 				<!-- MOBILE HEADER -->
 				<div class="wsmobileheader clearfix">
-					<a href="/"><span class="smllogo"><img src="{% static 'images/logo.png' %}" alt="mobile-logo" /></span></a>
+					<a href="/"><span class="smllogo"><img src="{% static 'images/logo.png' %}"
+								alt="mobile-logo" /></span></a>
 					<a id="wsnavtoggle" class="wsanimated-arrow"><span></span></a>
 				</div>
 
@@ -105,10 +120,10 @@
 
 
 						<!-- HEADER LOGO -->
-						<div class="desktoplogo"><a href="/" class="logo-black"><img src="{% static 'images/logo.png' %}"
-									alt="header-logo"></a></div>
-						<div class="desktoplogo"><a href="/" class="logo-white"><img src="{% static 'images/logo-white.png' %}"
-									alt="header-logo"></a></div>
+						<div class="desktoplogo"><a href="/" class="logo-black"><img
+									src="{% static 'images/logo.png' %}" alt="header-logo"></a></div>
+						<div class="desktoplogo"><a href="/" class="logo-white"><img
+									src="{% static 'images/logo-white.png' %}" alt="header-logo"></a></div>
 
 
 						<!-- MAIN MENU -->
@@ -117,30 +132,36 @@
 
 
 								<li class="nl-simple" aria-haspopup="true"><a href="/">Главная</a></li>
-                                <li class="nl-simple" aria-haspopup="true"><a href="{% url 'about_us_view' %}">О нас</a></li>
-                                <li class="nl-simple" aria-haspopup="true"><a href="{% url 'projects_view' %}">Проекты</a></li>
+								<li class="nl-simple" aria-haspopup="true"><a href="{% url 'about_us_view' %}">О нас</a>
+								</li>
+								<li class="nl-simple" aria-haspopup="true"><a
+										href="{% url 'projects_view' %}">Проекты</a></li>
 
 
 
 
 
-													
-									<li class="nl-simple white-color header-socials {% block extra-class %}{% endblock %} ico-20 clearfix" aria-haspopup="true">
-										<span><a href="https://www.instagram.com/relevant.group/" class="ico-instagram"><span class="flaticon-instagram"></span></a></span>
-                                        <span><a href="https://api.whatsapp.com/send/?phone=%2B77754037041&text&app_absent=0" class="ico-instagram"><span class="flaticon-whatsapp"></span></a></span>
-										
-                                        <span><a href="#" class="ico-dribbble"><span class="flaticon-telegram"></span></a></span>	
-										<li class="nl-simple" aria-haspopup="true">
-											<a href="tel:+7 775 403 70 41" class="btn btn-green tra-white-hover">Связаться</a>
-										</li> 
-									</li>
 
-				
-							
+								<li class="nl-simple white-color header-socials {% block extra-class %}{% endblock %} ico-20 clearfix"
+									aria-haspopup="true">
+									<span><a href="https://www.instagram.com/relevant.group/"
+											class="ico-instagram"><span class="flaticon-instagram"></span></a></span>
+									<span><a href="https://api.whatsapp.com/send/?phone=%2B77754037041&text&app_absent=0"
+											class="ico-instagram"><span class="flaticon-whatsapp"></span></a></span>
+
+									<span><a href="#" class="ico-dribbble"><span
+												class="flaticon-telegram"></span></a></span>
+								<!-- <li class="nl-simple" aria-haspopup="true">
+									<a href="tel:+7 775 403 70 41" class="btn btn-green tra-white-hover">Связаться</a>
+								</li> -->
+								</li>
+
+
+
 
 
 							</ul>
-							
+
 
 						</nav> <!-- END MAIN MENU -->
 
@@ -153,142 +174,145 @@
 		</header> <!-- END HEADER -->
 
 
-        {% block content %}
-        {% endblock %}
-				<!-- FOOTER-1
+		{% block content %}
+		{% endblock %}
+		<!-- FOOTER-1
 			============================================= -->
-				<footer id="footer-1" class="footer division">
-					<div class="container">
+		<footer id="footer-1" class="footer division">
+			<div class="container">
 
 
-						<!-- FOOTER CONTENT -->
-						<div class="row">
+				<!-- FOOTER CONTENT -->
+				<div class="row">
 
 
-							<!-- FOOTER INFO -->
-							<div class="col-lg-4">
-								<div class="footer-info mb-40">
+					<!-- FOOTER INFO -->
+					<div class="col-lg-4">
+						<div class="footer-info mb-40">
 
-									<!-- Footer Logo -->
-									<img class="footer-logo mb-25" src="{% static 'images/logo.png' %}" alt="footer-logo">
+							<!-- Footer Logo -->
+							<img class="footer-logo mb-25" src="{% static 'images/logo.png' %}" alt="footer-logo">
 
-									<!-- Text -->
-									<p class="p-md">Мы создали “Relevant” для того, чтобы вам было проще достигать своих целей по продвижению товаров и услуг в интернете.
-									</p>
+							<!-- Text -->
+							<p class="p-md">Мы создали “Relevant” для того, чтобы вам было проще достигать своих целей
+								по продвижению товаров и услуг в интернете.
+							</p>
 
-								</div>
-							</div>
-
-
-							<!-- FOOTER LINKS -->
-							<div class="col-sm-6 col-md-3 col-lg-2">
-								<div class="footer-links mb-40">
-
-									<!-- Title -->
-									<h6 class="h6-xl">Команда</h6>
-
-									<!-- Footer Links -->
-									<ul class="foo-links text-secondary clearfix">
-                                        <li>
-											<p class="p-md"><a href="/">Главная</a></p>
-										</li>
-										<li>
-											<p class="p-md"><a href="{% url 'about_us_view' %}">О нас</a></p>
-										</li>
-										<li>
-											<p class="p-md"><a href="{% url 'projects_view' %}">Проекты</a></p>
-										</li>
-										
-								
-									</ul>
-
-								</div>
-							</div>
-
-
-						
-
-
-						</div> <!-- END FOOTER CONTENT -->
-
-
-						<hr>
-
-
-						<!-- BOTTOM FOOTER -->
-						<div class="bottom-footer">
-							<div class="row row-cols-1 row-cols-md-2 d-flex align-items-center">
-
-
-								<!-- FOOTER COPYRIGHT -->
-								<div class="col">
-									<div class="footer-copyright">
-										<p>&copy; 2022 Relevant. Все права защищены</p>
-									</div>
-								</div>
-
-
-								<!-- BOTTOM FOOTER LINKS -->
-								<div class="col">
-									<ul class="bottom-footer-list text-secondary text-end">
-										<li class="first-li">
-											<p><a href="#">Instagram</a></p>
-										</li>
-										<li>
-											<p><a href="https://api.whatsapp.com/send/?phone=%2B77754037041&text&app_absent=0">Whatsapp</a></p>
-										</li>
-									
-										<li>
-											<p><a href="#">Telegram</a></p>
-										</li>
-										<li class="last-li">
-											<p><a href="tel:+7 775 403 70 41">Телефон номера: +7 775 403 70 41</a></p>
-										</li>
-									</ul>
-								</div>
-
-
-							</div> <!-- End row -->
-						</div> <!-- BOTTOM FOOTER -->
-
-
+						</div>
 					</div>
-				</footer> <!-- END FOOTER-1 -->
+
+
+					<!-- FOOTER LINKS -->
+					<div class="col-sm-6 col-md-3 col-lg-2">
+						<div class="footer-links mb-40">
+
+							<!-- Title -->
+							<h6 class="h6-xl">Команда</h6>
+
+							<!-- Footer Links -->
+							<ul class="foo-links text-secondary clearfix">
+								<li>
+									<p class="p-md"><a href="/">Главная</a></p>
+								</li>
+								<li>
+									<p class="p-md"><a href="{% url 'about_us_view' %}">О нас</a></p>
+								</li>
+								<li>
+									<p class="p-md"><a href="{% url 'projects_view' %}">Проекты</a></p>
+								</li>
+
+
+							</ul>
+
+						</div>
+					</div>
 
 
 
 
-			</div> <!-- END PAGE CONTENT -->
+
+				</div> <!-- END FOOTER CONTENT -->
+
+
+				<hr>
+
+
+				<!-- BOTTOM FOOTER -->
+				<div class="bottom-footer">
+					<div class="row row-cols-1 row-cols-md-2 d-flex align-items-center">
+
+
+						<!-- FOOTER COPYRIGHT -->
+						<div class="col">
+							<div class="footer-copyright">
+								<p>&copy; 2022 Relevant. Все права защищены</p>
+							</div>
+						</div>
+
+
+						<!-- BOTTOM FOOTER LINKS -->
+						<div class="col">
+							<ul class="bottom-footer-list text-secondary text-end">
+								<li class="first-li">
+									<p><a href="#">Instagram</a></p>
+								</li>
+								<li>
+									<p><a
+											href="https://api.whatsapp.com/send/?phone=%2B77754037041&text&app_absent=0">Whatsapp</a>
+									</p>
+								</li>
+
+								<li>
+									<p><a href="#">Telegram</a></p>
+								</li>
+								<li class="last-li">
+									<p><a href="tel:+7 775 403 70 41">Телефон номера: +7 775 403 70 41</a></p>
+								</li>
+							</ul>
+						</div>
+
+
+					</div> <!-- End row -->
+				</div> <!-- BOTTOM FOOTER -->
+
+
+			</div>
+		</footer> <!-- END FOOTER-1 -->
 
 
 
 
-			<!-- EXTERNAL SCRIPTS
+	</div> <!-- END PAGE CONTENT -->
+
+
+
+
+	<!-- EXTERNAL SCRIPTS
 		============================================= -->
-            <script src="https://unpkg.com/imask"></script>
-			<script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
-			<script src="{% static 'js/bootstrap.min.js' %}"></script>
-			<script src="{% static 'js/modernizr.custom.js' %}"></script>
-			<script src="{% static 'js/jquery.easing.js' %}"></script>
-			<script src="{% static 'js/jquery.appear.js' %}"></script>
-			<script src="{% static 'js/jquery.scrollto.js' %}"></script>
-			<script src="{% static 'js/menu.js' %}"></script>
-			<script src="{% static 'js/imagesloaded.pkgd.min.js' %}"></script>
-			<script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
-			<script src="{% static 'js/owl.carousel.min.js' %}"></script>
-			<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
-			<script src="{% static 'js/quick-form.js' %}"></script>
-			<script src="{% static 'js/request-form.js' %}"></script>
-			<script src="{% static 'js/jquery.validate.min.js' %}"></script>
-			<script src="{% static 'js/jquery.ajaxchimp.min.js' %}"></script>
-			<script src="{% static 'js/wow.js' %}"></script>
-            
+	<script src="https://unpkg.com/imask"></script>
+	<script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'js/modernizr.custom.js' %}"></script>
+	<script src="{% static 'js/jquery.easing.js' %}"></script>
+	<script src="{% static 'js/jquery.appear.js' %}"></script>
+	<script src="{% static 'js/jquery.scrollto.js' %}"></script>
+	<script src="{% static 'js/menu.js' %}"></script>
+	<script src="{% static 'js/imagesloaded.pkgd.min.js' %}"></script>
+	<script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+	<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+	<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+	<script src="{% static 'js/quick-form.js' %}"></script>
+	<script src="{% static 'js/request-form.js' %}"></script>
+	<script src="{% static 'js/jquery.validate.min.js' %}"></script>
+	<script src="{% static 'js/jquery.ajaxchimp.min.js' %}"></script>
+	<script src="{% static 'js/wow.js' %}"></script>
 
-			<!-- Custom Script -->
-			<script src="{% static 'js/custom.js' %}"></script>
 
-			<!-- Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information. -->
-			<!--
+	<!-- Custom Script -->
+	<script src="{% static 'js/custom.js' %}"></script>
+
+	<!-- Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information. -->
+	<!--
 		<script>
 			var _gaq = _gaq || [];
 			_gaq.push(['_setAccount', 'UA-XXXXX-X']);
