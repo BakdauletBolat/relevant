@@ -4,8 +4,7 @@ DATABASES = {
         'NAME': 'relevant',
         'USER': 'relevant_user',
         'PASSWORD': 'baguvix123F',
-        'HOST': 'localhost',
-        'PORT': '',
+        'HOST': 'localhost'
     }
 }
 
